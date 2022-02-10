@@ -22,6 +22,10 @@ function calculator() {
         alert(`${n1} * ${n2} = ${result}`);
     }
 
+    function realDiv() {
+        result = n1 / n2;
+        alert(`${n1} / ${n2} = ${result}`);
+    }
 
     
     if (operations == 1) {
