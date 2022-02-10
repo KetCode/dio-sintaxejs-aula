@@ -32,7 +32,10 @@ function calculator() {
         alert(`O resto da divisão entre ${n1} e ${n2} é igual a ${result}`);
     }
 
-
+    function pot() {
+        result = n1 ** n2;
+        alert(`${n1} elevado a ${n2} é igual a ${result}`);
+    }
     
     if (operations == 1) {
         sum();
