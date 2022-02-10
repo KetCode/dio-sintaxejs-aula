@@ -27,6 +27,12 @@ function calculator() {
         alert(`${n1} / ${n2} = ${result}`);
     }
 
+    function intDiv() {
+        result = n1 % n2;
+        alert(`O resto da divisão entre ${n1} e ${n2} é igual a ${result}`);
+    }
+
+
     
     if (operations == 1) {
         sum();
