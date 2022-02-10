@@ -11,6 +11,13 @@ function calculator() {
         result = n1 + n2;
         alert(`${n1} + ${n2} = ${result}`);
     }
+
+    function sub() {
+        result = n1 - n2;
+        alert(`${n1} - ${n2} = ${result}`);
+    }
+
+
     
     if (operations == 1) {
         sum();
