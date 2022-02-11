@@ -1,11 +1,13 @@
 function calculator() {
     const operations = prompt(
-        'Escolha uma operação: \n 1 - Soma \n 2 - Subtração \n 3 - Multiplicação \n 4 - Divisão real \n 5 - Divisão inteira \n 6 - Potenciação'
+        'Escolha uma operação: \n 1 - Soma \n 2 - Subtração \n 3 - Multiplicação \n 4 - Divisão real \n 5 - Divisão inteira \n 6 - Potenciação \n 7 - Sair'
     );
 
-    let n1 = Number(prompt('Insira o primeiro valor:'));
-    let n2 = Number(prompt('Insira o segundo valor'));
-    let result;
+    if (operations < 7) {
+        var n1 = Number(prompt('Insira o primeiro valor:'));
+        var n2 = Number(prompt('Insira o segundo valor'));
+        var result;
+    } 
 
     function sum() {
         result = n1 + n2;
@@ -42,6 +44,9 @@ function calculator() {
         alert(`${n1} elevado a ${n2} é igual a ${result}`);
         newOperation();
     }
+
+    function outCalc() {
+        alert('Até mais!');
     }
     
     if (operations == 1) {
@@ -56,6 +61,8 @@ function calculator() {
         intDiv();
     } else if (operations == 6) {
         pot();
+    } else if (operations == 7) {
+        outCalc();
     }
 }
 
