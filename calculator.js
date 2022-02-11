@@ -69,23 +69,7 @@ function calculator() {
     function outCalc() {
         alert('Até mais!');
     }
-    
-    /* if (operations == 1) {
-        sum();
-    } else if (operations == 2) {
-        sub();
-    } else if (operations == 3) {
-        mul();
-    } else if (operations == 4) {
-        realDiv();
-    } else if (operations == 5) {
-        intDiv();
-    } else if (operations == 6) {
-        pot();
-    } else if (operations == 7) {
-        outCalc();
-    } */
-    
+
     switch (operations) {
         case 1:
             sum();    
@@ -112,8 +96,5 @@ function calculator() {
             break;
     }  
 }
-
-
-
 
 calculator();
