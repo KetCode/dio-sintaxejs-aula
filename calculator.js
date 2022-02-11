@@ -60,18 +60,17 @@ function calculator() {
                     newOperation();
                 }
             }
-            
-            function outCalc() {
-                alert('Até mais!');
-            }
-        }
-        
+        }    
     } else if (!operations || operations >=8) {
         alert('Erro - operação inválida!');
         calculator();
     }
+
+    function outCalc() {
+        alert('Até mais!');
+    }
     
-    if (operations == 1) {
+    /* if (operations == 1) {
         sum();
     } else if (operations == 2) {
         sub();
@@ -85,19 +84,36 @@ function calculator() {
         pot();
     } else if (operations == 7) {
         outCalc();
-    }
+    } */
+    
+    switch (operations) {
+        case 1:
+            sum();    
+            break;
+        case 2:
+            sub();
+            break;
+        case 3:
+            mul();
+            break;
+        case 4:
+            realDiv();
+            break;
+        case 5:
+            intDiv();
+            break;
+        case 6:
+            pot();
+            break;
+        case 7:
+            outCalc();
+            break;
+        default:
+            break;
+    }  
 }
 
-/* switch(operations) {
-    case '1':
-        // sum()    
-        console.log('helo');  
-        break;
-   case 2:
-        console.log('helo'); 
-    default:
-        break;
-}  */
+
 
 
 calculator();
