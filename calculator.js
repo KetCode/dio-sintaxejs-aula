@@ -7,50 +7,68 @@ function calculator() {
         var n1 = Number(prompt('Insira o primeiro valor:'));
         var n2 = Number(prompt('Insira o segundo valor'));
         var result;
+
+        if (!n1 || !n2) {
+            alert('Erro - parâmetros inválidos!');
+            calculator();
+        } else {
+            function sum() {
+                result = n1 + n2;
+                alert(`${n1} + ${n2} = ${result}`);
+                newOperation();
+            }
+        
+            function sub() {
+                result = n1 - n2;
+                alert(`${n1} - ${n2} = ${result}`);
+                newOperation();
+            }
+        
+            function mul() {
+                result = n1 * n2;
+                alert(`${n1} * ${n2} = ${result}`);
+                newOperation();
+            }
+        
+            function realDiv() {
+                result = n1 / n2;
+                alert(`${n1} / ${n2} = ${result}`);
+                newOperation();
+            }
+        
+            function intDiv() {
+                result = n1 % n2;
+                alert(`O resto da divisão entre ${n1} e ${n2} é igual a ${result}`);
+                newOperation();
+            }
+        
+            function pot() {
+                result = n1 ** n2;
+                alert(`${n1} elevado a ${n2} é igual a ${result}`);
+                newOperation();
+            }
+        
+            function newOperation() {
+                let option = prompt('Deseja fazer outra operação? \n 1 - Sim \n 2 - Não');
+            
+                if (option == 1) {
+                    calculator();
+                } else if (option == 2) {
+                    alert('Até mais!');
+                } else {
+                    alert('Digite uma opção válida!');
+                    newOperation();
+                }
+            }
+            
+            function outCalc() {
+                alert('Até mais!');
+            }
+        }
         
     } else if (!operations || operations >=8) {
         alert('Erro - operação inválida!');
         calculator();
-    }
-
-    function sum() {
-        result = n1 + n2;
-        alert(`${n1} + ${n2} = ${result}`);
-        newOperation();
-    }
-
-    function sub() {
-        result = n1 - n2;
-        alert(`${n1} - ${n2} = ${result}`);
-        newOperation();
-    }
-
-    function mul() {
-        result = n1 * n2;
-        alert(`${n1} * ${n2} = ${result}`);
-        newOperation();
-    }
-
-    function realDiv() {
-        result = n1 / n2;
-        alert(`${n1} / ${n2} = ${result}`);
-        newOperation();
-    }
-
-    function intDiv() {
-        result = n1 % n2;
-        alert(`O resto da divisão entre ${n1} e ${n2} é igual a ${result}`);
-        newOperation();
-    }
-
-    function pot() {
-        result = n1 ** n2;
-        alert(`${n1} elevado a ${n2} é igual a ${result}`);
-        newOperation();
-    }
-
-    function outCalc() {
-        alert('Até mais!');
     }
     
     if (operations == 1) {
@@ -67,19 +85,6 @@ function calculator() {
         pot();
     } else if (operations == 7) {
         outCalc();
-    }
-}
-
-function newOperation() {
-    let option = prompt('Deseja fazer outra operação? \n 1 - Sim \n 2 - Não');
-
-    if (option == 1) {
-        calculator();
-    } else if (option == 2) {
-        alert('Até mais!');
-    } else {
-        alert('Digite uma opção válida!');
-        newOperation();
     }
 }
 
