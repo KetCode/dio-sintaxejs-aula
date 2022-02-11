@@ -10,31 +10,38 @@ function calculator() {
     function sum() {
         result = n1 + n2;
         alert(`${n1} + ${n2} = ${result}`);
+        newOperation();
     }
 
     function sub() {
         result = n1 - n2;
         alert(`${n1} - ${n2} = ${result}`);
+        newOperation();
     }
 
     function mul() {
         result = n1 * n2;
         alert(`${n1} * ${n2} = ${result}`);
+        newOperation();
     }
 
     function realDiv() {
         result = n1 / n2;
         alert(`${n1} / ${n2} = ${result}`);
+        newOperation();
     }
 
     function intDiv() {
         result = n1 % n2;
         alert(`O resto da divisão entre ${n1} e ${n2} é igual a ${result}`);
+        newOperation();
     }
 
     function pot() {
         result = n1 ** n2;
         alert(`${n1} elevado a ${n2} é igual a ${result}`);
+        newOperation();
+    }
     }
     
     if (operations == 1) {
@@ -52,6 +59,18 @@ function calculator() {
     }
 }
 
+function newOperation() {
+    let option = prompt('Deseja fazer outra operação? \n 1 - Sim \n 2 - Não');
+
+    if (option == 1) {
+        calculator();
+    } else if (option == 2) {
+        alert('Até mais!');
+    } else {
+        alert('Digite uma opção válida!');
+        newOperation();
+    }
+}
 
 /* switch(operations) {
     case '1':
