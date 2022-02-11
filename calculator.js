@@ -1,13 +1,17 @@
 function calculator() {
-    const operations = prompt(
+    const operations = Number(prompt(
         'Escolha uma operação: \n 1 - Soma \n 2 - Subtração \n 3 - Multiplicação \n 4 - Divisão real \n 5 - Divisão inteira \n 6 - Potenciação \n 7 - Sair'
-    );
+    ));
 
     if (operations < 7) {
         var n1 = Number(prompt('Insira o primeiro valor:'));
         var n2 = Number(prompt('Insira o segundo valor'));
         var result;
-    } 
+        
+    } else if (!operations || operations >=8) {
+        alert('Erro - operação inválida!');
+        calculator();
+    }
 
     function sum() {
         result = n1 + n2;
